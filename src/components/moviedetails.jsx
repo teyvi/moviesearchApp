@@ -21,7 +21,7 @@ const Moviedetails = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-5 gap-4">
+    <div className="grid grid-cols-8 gap-4">
       {movieList.map((item, index) => (
         <div key={index} className="rounded">
           <img
