@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header';
-import Moviedetails from '../components/moviedetails';
+import Moviedetails from '../components/movielist';
 import Footer from '../components/footer';
 
 const Homepage = () => {
