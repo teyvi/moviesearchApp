@@ -28,7 +28,7 @@ const Moviedetails = () => {
 
       <div className="flex justify-center mt-9">
         <div className="container"> <span className="font-extrabold	">Movies</span>
-          <div className=" flex overflow-auto gap-x-2  ">
+          <div className=" flex overflow-auto gap-x-1  hide-scroll-bar">
             {movieList.map((item, index) => (
               <div key={index} className="flex-shrink-0 ">
                 <Link to={'/moviedetailspage/' + item.id}>

@@ -25,18 +25,28 @@ const Moviedetailspage = () => {
   return (
     <>
       <Navbar />
-      <div className="container h-96 bg-red-400 m-auto mt-5">
+      <div className="container h-96 m-auto mt-5 flex justify-center">
         {movieDetails ? (
           <>
             {/* Display movie details */}
-            <div>
+            <div className="flex">
               <img
                 src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
                 alt="movie"
+                className="h-64  mt-3 rounded-md mx-0.5 "
               />
-              <div>Movie Title {movieDetails.original_title}</div>
-              <div>Release Date {movieDetails.release_date}</div>
-              <div>Overview {movieDetails.overview}</div>
+              <div className="ml-7">
+                <div className="font-bold text-2xl pt-6">{movieDetails.original_title}</div>
+                <div className="pt-16">Release Date: {movieDetails.release_date}</div>
+                <div>Overview: {movieDetails.overview}</div>
+                <div>Rating: {movieDetails.vote_average}</div>
+                <div>
+                  Production Countries:
+                  {movieDetails.production_countries.map((country) => (
+                    <div key={country.iso_3166_1}>{country.name}</div>
+                  ))}
+                </div>
+              </div>
             </div>
           </>
         ) : (

@@ -1,28 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Searchinput from "./searchinput";
 
 const Navbar = () => {
   return (
     <div>
       <div className=" justify-center text-zinc-50">
         <div className="bg-red-900 flex justify-between h-16 p-5">
-          <div>LOGO</div>
+          <Link to="/">
+            {" "}
+            <div><h1>OPALFLIX</h1></div>
+          </Link>
+          <div>
+            <Searchinput/>
+          </div>
+
           <div className="">
             <ul className="flex ">
               <li className="px-8">
-                <Link to="/"> Home</Link>
+                <Link to="/"> HOME</Link>
               </li>
               <li className="px-8">
-                <Link to="/allmoviespage">MOVIES</Link>
+                <Link to="/movies">MOVIES</Link>
               </li>
               <li className="px-8">
-                <Link>TV SHOWS</Link>
-              </li>
-              <li className="px-8">
-                <Link>POPULAR</Link>
-              </li>
-              <li className="px-8">
-                <Link>TOP-RATED</Link>
+                <Link to='/seriespage'>TV SHOWS</Link>
               </li>
             </ul>
           </div>
