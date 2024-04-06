@@ -2,33 +2,33 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const PopularMovies = () => {
+const TopRatedSeries = () => {
   const url =
-    "https://api.themoviedb.org/3/movie/popular?api_key=55dcde56c65284d28b71f215d3411474";
-  const [popularmovies, setPopularMovies] = useState([]);
+    "https://api.themoviedb.org/3/tv/top_rated?api_key=55dcde56c65284d28b71f215d3411474";
+  const [topRatedSeries, setTopRatedSeries] = useState([]);
 
   // declare the useEffect
   useEffect(() => {
-    async function displayPopularMovies() {
+    async function displayTopRatedSeries() {
       try {
         const response = await axios.get(url);
         const responseJson = response.data.results;
         console.log("response", responseJson);
-        setPopularMovies(responseJson);
+        setTopRatedSeries(responseJson);
       } catch (error) {
         console.log(error);
       }
     }
-    displayPopularMovies();
+    displayTopRatedSeries();
   }, []);
 
   return (
     <>
       <div className="flex justify-center mt-9">
         <div className="container">
-        <h1>Popular Movies</h1>
-
-            {popularmovies.map((item, index) => (
+          <h1>Top-Rated Series</h1>
+          <div className="flex overflow-auto gap-x-2 ">
+            {topRatedSeries.map((item, index) => (
               <div key={index} className="flex-shrink-0 ">
               <Link to={'/moviedetailspage/' + item.id}>
               <div className=" w-48 h-auto p-4 rounded-md ">
@@ -51,3 +51,4 @@ const PopularMovies = () => {
   );
 };
 
+export default TopRatedSeries;

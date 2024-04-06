@@ -10,11 +10,11 @@ const Moviedetailspage = () => {
     async function fetchMovieDetails() {
       try {
         // Fetch movie details using movie ID
-        const url = `https://api.themoviedb.org/3/movie/${id}?api_key=d20a5b8aba07e5f652033a77ed8a2312`; 
+        const url = `https://api.themoviedb.org/3/movie/${id}?api_key=d20a5b8aba07e5f652033a77ed8a2312`;
         const response = await fetch(url);
         const data = await response.json();
         setMovieDetails(data);
-        console.log('mydata',data)
+        console.log("mydata", data);
       } catch (error) {
         console.log(error);
       }
@@ -25,7 +25,7 @@ const Moviedetailspage = () => {
   return (
     <>
       <Navbar />
-      <div className="container h-96 m-auto mt-5 flex justify-center">
+
         {movieDetails ? (
           <>
             {/* Display movie details */}
