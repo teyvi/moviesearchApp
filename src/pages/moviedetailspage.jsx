@@ -52,7 +52,6 @@ const Moviedetailspage = () => {
         ) : (
           <div>Loading...</div>
         )}
-      </div>
     </>
   );
 };

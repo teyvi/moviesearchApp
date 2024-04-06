@@ -27,7 +27,7 @@ const PopularMovies = () => {
       <div className="flex justify-center mt-9">
         <div className="container">
         <h1>Popular Movies</h1>
-
+        <div className="flex overflow-auto gap-x-2 hide-scroll-bar ">
             {popularmovies.map((item, index) => (
               <div key={index} className="flex-shrink-0 ">
               <Link to={'/moviedetailspage/' + item.id}>
@@ -45,9 +45,10 @@ const PopularMovies = () => {
             </div>
             ))}
           </div>
+          </div>
         </div>
-      </div>
     </>
   );
 };
 
+export default PopularMovies;
