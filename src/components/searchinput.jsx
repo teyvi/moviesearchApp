@@ -29,6 +29,7 @@ const Searchinput = () => {
       <div className="bg-white">
         <button className="font-semibold text-stone-950">Search</button>
       </div>
+      //{" "}
     </div>
   );
 };

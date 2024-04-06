@@ -25,7 +25,7 @@ const Moviedetailspage = () => {
   return (
     <>
       <Navbar />
-      <div className="container h-96 bg-red-400 m-auto mt-5 flex justify-center">
+
         {movieDetails ? (
           <>
             {/* Display movie details */}
