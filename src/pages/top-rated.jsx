@@ -27,9 +27,9 @@ const Toprated = () => {
     displayAllMovies();
   }, []);
 
-  const handleRateButtonClick = (average) => {
-    alert(`The average rating is ${average}`);
-  };
+  // const handleRateButtonClick = (average) => {
+  //   alert(`The average rating is ${average}`);
+  // };
 
   if (!movies) {
     return <h1>Loading</h1>;

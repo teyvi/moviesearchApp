@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./navbar";
-import Searchinput from "./searchinput";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -77,7 +76,6 @@ const Header = () => {
                   <h1 className="text-4xl text-white text-outline font-bold mb-4 ">{item.title}</h1>
                   </div>
                   <div>
-                    <h3></h3>
                   </div>
                 </div>
               ))}
